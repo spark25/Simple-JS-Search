@@ -1,6 +1,6 @@
 const searchBar = document.querySelector('[data-search-bar]');
 const cardsContainer = document.querySelector('[data-cards-container]');
-const DELAY = 500
+const DELAY = 300
 let users = []
 
 let handleSearch = _debounceSearch(getSeachResults, DELAY)
