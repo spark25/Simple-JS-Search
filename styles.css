@@ -1,0 +1,57 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-image: linear-gradient(135deg, #fdfcfb 0%, #e2d1c3 100%);
+  font-family: "Nunito", sans-serif;
+}
+
+#app {
+  max-width: 50rem;
+  margin: 0 auto;
+}
+
+#app > h1{
+    font-size: 600;
+    padding: 1rem 0;
+    
+}
+
+.search-wrapper > #search{
+    width: 100%;
+    padding: 0.8rem 0.5rem;
+}
+.cards-container {
+  margin-top: 1.5rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1rem;
+}
+
+.card {
+  padding: 1rem;
+  border: 1px solid #888;
+  background-image: linear-gradient(
+    to top,
+    #f3e7e9 0%,
+    #e3eeff 99%,
+    #e3eeff 100%
+  );
+}
+
+.card .card-content > .card-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.card .card-content > .card-email {
+  font-size: 0.9rem;
+  color: #777;
+  margin-top: 0.5rem;
+}
+
+.card.hide {
+  display: none !important;
+}
