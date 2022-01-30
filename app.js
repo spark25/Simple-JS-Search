@@ -1,23 +1,32 @@
 const searchBar = document.querySelector('[data-search-bar]');
 const cardsContainer = document.querySelector('[data-cards-container]');
-
+const DELAY = 500
 let users = []
 
+let handleSearch = _debounceSearch(getSeachResults, DELAY)
 
-searchBar.addEventListener('input', handleSearch);
-
-function isVisible() {
-
-    return true
+function _debounceSearch(fx, delay) {
+    let timer;
+    return function () {
+        let ctx = this
+        let args = arguments
+        clearInterval(timer)
+        timer = setTimeout(() => {
+            fx.apply(ctx, args)
+        }, delay)
+    }
 }
-function handleSearch(e) {
+
+function getSeachResults(e) {
     const query = e.target.value.toLowerCase()
     users.forEach(user => {
         const isVisible = user.name.toLowerCase().includes(query) || user.email.toLowerCase().includes(query)
         user.element.classList.toggle('hide', !isVisible)
     })
-
 }
+
+
+searchBar.addEventListener('input', handleSearch);
 
 
 // call api
