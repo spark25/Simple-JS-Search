@@ -5,7 +5,7 @@
 ## Features
 - Responsive UI using CSS Grid
 - Dynamic content using [Jsonplaceholder](https://jsonplaceholder.typicode.com/) api and HTML ```<template></template>```
-- Debounced search implememntation
+- Debounced search implementation
 
 ### Tags
 \#JavaScript \#debounce
